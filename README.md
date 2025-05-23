@@ -28,15 +28,15 @@ These are optimized to reconstruct the experimental transfer function provided.
 - [PyTorch](https://pytorch.org/docs/stable/generated/torch.optim.Adam.html)
 
 ## Files and Components
-`Extraction:`  
+`Traditional_Extraction:`  
 A class designed to treat experimental data in the time domain. Check notebook for usage example.  
-`PINNs:`  
+`Fresnel_model:`  
 - `Model:` Classes and utility files for back-propagation driven fitting.
 - `data:` Contains two pulses through 3mm silicon, data from NR extraction on this experiment and an example of a sequential version of the back-propagation model.  
 
 `Notebooks:` Shows the treatment of experimental data on the Si datasets, and uses an NR numerical fit to find n and k.  
 
-`Transfer Matrix Methods:` Uses Transfer matrix methods to simulate time domain pulses for media with multiple layers of different materials and thicknesses.
+`Transfer Matrix Methods:` Uses Transfer matrix methods to simulate time domain pulses for media with multiple layers of different materials and thicknesses. Optimized code can now run extractions in roughly 1 second for benchark cases. Has an extra Bayesian optimization method for accelleration and to prevent vanishing gradients (non-convergence from poor initial guesses).
 
 
 ## Getting Started
@@ -55,7 +55,7 @@ Step-by-step guide on how to install and set up the project.
 
 Clone the repository:
 ```bash
-git clone https://github.com/tls54/THz-TDS.git
+git clone https://github.com/modellingcomputer142/THz-TDS.git
 ```
 
 ### Usage
